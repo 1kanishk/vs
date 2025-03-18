@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <a href="ht.html">second html</a>
+    </head>    
+    
+    <body>
+        <br>
+        <br>
+        <button onclick="hello()">click</button>
+        
+        <script>
+        
+            function hello()
+            {
+                alert("hallelujah");
+            }
+        </script>
+        <br>
+        <pre>hello</pre>
+    <a href="http://google.com" target="_blank">google</a>
+    <a href=""></a>
+
+    <ol>
+        <li>hello</li>
+        <li>ji</li>
+    </ol>    
+    <ul>
+        <li>hello</li>
+        <li>ji</li>
+    </ul>    
+    <table border="2px" cellpadding="10px" cellspacing="2px">
+        <thead>
+            <td>sunday</td>
+            <td>monday</td>
+            <td>tuesday</td>
+            <td>wednesday</td>
+            <td>thursday</td>
+        </thead>    
+        <tbody>
+            <td>FOC</td>
+            <td>cs</td>
+            <td>office</td>
+            <td>OS</td>
+            <td>web tech</td>
+        </tbody>    
+    </table>    
+    <br><br>
+    <form action="backend.php">
+        <label for="name">name<input type="text"></label>
+        <br>
+        <br>
+        <label for="class">class<input type="text"></label>
+    </form>    
+
+
+
+
+    <p id="demo">Hello!</p>
+    <button onclick="changeText()">Click Me</button>
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text Changed!";
+        }    
+
+        function add(a, b) {
+            return a + b;
+        }    
+        console.log(add(5, 3));
+
+
+    </script>        
+
+
+    <form>
+        <fieldset>
+            <legend>Send e-mail to someone@example.com:</legend>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+            <input type="date" value="choose">
+        </fieldset>    
+    </form>    
+
+
+    <button onclick="showMessage()">Click Me</button>
+    <p id="output"></p>
+    <script>
+        function showMessage() {
+            document.getElementById("output").innerHTML = "Button Clicked!";
+        }    
+    </script>        
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'green';
+        ctx.fillRect(50, 25, 100, 50);
+    </script>    
+    <br>
+    <br>
+    <div style="width:100px; height:100px; background-color:blue; box-shadow:7px 7px 10px black;"></div>
+    <br>
+    <br>
+    <style>
+        h1::before {
+            content: "👉 ";
+            color: red;
+        }    
+
+        h1::after {
+            content: " 🎉";
+            color: green;
+        }    
+    </style>    
+    <h1>Welcome</h1>
+    <br>
+    <br>
+    <style>
+        button:hover {
+            background-color: yellow;
+        }    
+
+        input:focus {
+            border-color: blue;
+        }    
+    </style>    
+    <button>Hover Me</button>
+    <input type="text" placeholder="Focus on me">
+
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <style>
+            h1::before {
+                content: "📢 ";
+                color: red;
+            }    
+
+            h1::after {
+                content: " 🎉";
+                color: green;
+            }    
+
+            p::after {
+                content: " [Read More]";
+                font-style: italic;
+                color: blue;
+            }    
+        </style>        
+    </head>
+
+    <body>
+        <h1>Welcome</h1>
+        <p>This is a paragraph.</p>
+    </body>    
+
+    </html>
+
+
+    <canvas id="mycan" height="100" width="200" style="border: 1px solid #000;"></canvas>
+    <script>
+
+        let can = document.getElementById("mycan");
+        let ctx = canvas.getcontext("2d");
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(20, 50, 80, 30);
+
+
+
+
+
+    </script>    
+
+
+
+ 
+
+</body>
+
+</html>
