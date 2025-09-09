@@ -254,7 +254,6 @@
 
 //     }
 
-
 //     int show(){
 //         cout<<"name = "<<name<<endl;
 //         cout<<"id = "<<id;
@@ -529,13 +528,13 @@
 //     int num;
 //     cout << "Enter a number: ";
 //     cin >> num;
-    
+
 //     // Check if the number is prime and print the result
 //     if (isPrime(num))
 //         cout << num << " is a prime number." << endl;
 //     else
 //         cout << num << " is not a prime number." << endl;
-    
+
 //     return 0;
 // }
 
@@ -662,3 +661,244 @@
 //     showData(obj1, obj2); // Calling friend function
 //     return 0;
 // }
+
+//===================================================================================================================================================================
+
+// #include <iostream>
+// using namespace std;
+
+// class employee
+// {
+// public:
+//     int id = 4;
+//     string name = "kanishk";
+//     string dept = "IT";
+
+//     virtual void detail()
+//     {
+//         cout << "id = " << id << endl;
+//         cout << "name = " << name << endl;
+//     }
+
+//     virtual void area()
+//     {
+//         // Virtual function to be overridden in derived classes
+//     }
+// };
+
+// class manager : public employee
+// {
+// public:
+//     int team = 400;
+
+//     void area() override
+//     {
+//         cout << "Manager Details:" << endl;
+//         cout << "id = " << id << endl;
+//         cout << "name = " << name << endl;
+//         cout << "dept = " << dept << endl;
+//         cout << "team size = " << team << endl
+//              << endl;
+//     }
+// };
+
+// class enginner : public employee
+// {
+// public:
+//     string project_name = "college";
+
+//     void area() override
+//     {
+//         cout << "Engineer Details:" << endl;
+//         cout << "id = " << id << endl;
+//         cout << "name = " << name << endl;
+//         cout << "dept = " << dept << endl;
+//         cout << "project_name = " << project_name << endl;
+//     }
+// };
+
+// int main()
+// {
+//     employee *e;
+//     manager m;
+//     enginner en;
+
+//     // Using base class pointer to call overridden methods
+//     e = &m;
+//     e->area();
+
+//     e = &en;
+//     e->area();
+
+//     return 0;
+// }
+
+//===================================================================================================================================================================
+
+// #include <iostream>
+// using namespace std;
+
+// void byValue(int a) {
+//     a += 10;
+// }
+
+// void byReference(int &a) {
+//     a += 10;
+// }
+
+// int main() {
+//     int x = 5;
+//     byValue(x);
+//     cout << "After call by value: " << x << endl;
+
+//     byReference(x);
+//     cout << "After call by reference: " << x << endl;
+//     return 0;
+// }
+
+//===================================================================================================================================================================
+
+// #include <iostream>
+// using namespace std;
+
+// class Shape
+// {
+// public:
+//     virtual void area() = 0;
+// };
+
+
+// class Circle : public Shape
+// {
+//     float radius;
+    
+// public:
+
+//     Circle(float r){
+//         this->radius = r;
+//     }
+
+//     void area()
+//     {
+//         cout << "Area of Circle: " << 3.14f * radius * radius << endl;
+//     }
+// };
+
+
+
+// class Rectangle : public Shape
+// {
+//     float length, breadth;
+
+// public:
+
+//     Rectangle(float l, float b){
+//         this->length = l;
+//         this->breadth = b;
+//     }
+
+//     void area()
+//     {
+//         cout << "Area of Rectangle: " << length * breadth << endl;
+//     }
+// };
+
+
+
+// class Triangle : public Shape
+// {
+//     float base, height;
+
+// public:
+
+//     Triangle(float b, float h){
+//         this->base = b;
+//         this->height = h;
+
+//     }
+
+//     void area()
+//     {
+//         cout << "Area of Triangle: " << 0.5f * base * height << endl;
+//     }
+// };
+
+
+
+// int main()
+// {
+//     Shape *s;
+
+//     Circle c(5);
+//     Rectangle r(4, 6);
+//     Triangle t(3, 7);
+
+//     s = &c;
+//     s->area();
+
+//     s = &r;
+//     s->area();
+
+//     s = &t;
+//     s->area();
+
+//     return 0;
+// }
+
+//===================================================================================================================================================================
+
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+// int main()
+// {
+//     ofstream of;
+//     of.open("C:\\Users\\doshi\\OneDrive\\Desktop\\file.txt");
+//     of<<"chippi chippi chaapa chaapa";
+//     cout<<"data inserted in file"<<endl;
+//     of.close();
+
+//     ifstream in;
+//     string str;
+//     in.open("C:\\Users\\doshi\\OneDrive\\Desktop\\file.txt");   
+//     while (getline(in,str))
+//     {
+//         cout<<"data :- ";
+//         cout<<str;
+//     }
+//     in.close();
+    
+//     return 0;
+// }
+
+//===================================================================================================================================================================
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    virtual void speak() {
+        cout << "Animal speaks" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak(){
+        cout << "Dog barks" << endl;
+    }
+};
+
+int main() {
+    Animal a;
+    Dog d;
+
+    a.speak();  // Output: Animal speaks
+    d.speak();  // Output: Dog barks
+
+    Animal* ptr = &d;
+    ptr->speak();  // Output: Dog barks (overriding happens here)
+
+    return 0;
+}
