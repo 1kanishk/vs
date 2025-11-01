@@ -546,7 +546,7 @@
 // class String {
 //     char str[100];
 // public:
-// //                                                             STRING CONCATENATION
+// //                                                                     STRING CONCATENATION
 //     String(const char* s = "")
 //     {
 //         strcpy(str, s);
@@ -575,7 +575,7 @@
 
 // #include <iostream>
 // using namespace std;
-// //                                                               records of account holders
+// //                                                                  records of account holders
 // class account
 // {
 // public:
@@ -614,291 +614,147 @@
 //     return 0;
 // }
 
-//===================================================================================================================================================================
-
-// #include <iostream>
-// using namespace std;
-
-// class B; // Forward declaration of class B
-
-// class A
-// {
-//     int numA;
-
-// public:
-//     A(int x)
-//     {
-//         numA = x;
-//     }
-
-//     friend void showData(A, B); // Declaring friend function
-// };
-
-// class B
-// {
-//     int numB;
-
-// public:
-//     B(int y)
-//     {
-//         numB = y;
-//     } // Constructor to initialize numB
-//     friend void showData(A, B); // Declaring friend function
-// };
-
-// // Friend function definition
-// void showData(A objA, B objB)
-// {
-//     cout << "Value in class A: " << objA.numA << endl;
-//     cout << "Value in class B: " << objB.numB << endl;
-// }
-
-// int main()
-// {
-//     A obj1(10); // Creating an object of class A
-//     B obj2(20); // Creating an object of class B
-
-//     showData(obj1, obj2); // Calling friend function
-//     return 0;
-// }
 
 //===================================================================================================================================================================
-
-// #include <iostream>
+//                                                                         SINGLY LINKED LIST
+// #include <bits/stdc++.h>
 // using namespace std;
 
-// class employee
+// class Node
 // {
 // public:
-//     int id = 4;
-//     string name = "kanishk";
-//     string dept = "IT";
+//     int data;
+//     Node *next;
 
-//     virtual void detail()
+//     Node(int x) 
 //     {
-//         cout << "id = " << id << endl;
-//         cout << "name = " << name << endl;
-//     }
-
-//     virtual void area()
-//     {
-//         // Virtual function to be overridden in derived classes
+//         data = x;
+//         next = nullptr;
 //     }
 // };
 
-// class manager : public employee
-// {
-// public:
-//     int team = 400;
+// void insertathead(Node* &head,int val){ // INSERT AT STARTING
 
-//     void area() override
-//     {
-//         cout << "Manager Details:" << endl;
-//         cout << "id = " << id << endl;
-//         cout << "name = " << name << endl;
-//         cout << "dept = " << dept << endl;
-//         cout << "team size = " << team << endl
-//              << endl;
-//     }
-// };
+//     Node* temp = new Node(val);
+//     temp->next = head;
+//     head = temp;
 
-// class enginner : public employee
-// {
-// public:
-//     string project_name = "college";
-
-//     void area() override
-//     {
-//         cout << "Engineer Details:" << endl;
-//         cout << "id = " << id << endl;
-//         cout << "name = " << name << endl;
-//         cout << "dept = " << dept << endl;
-//         cout << "project_name = " << project_name << endl;
-//     }
-// };
-
-// int main()
-// {
-//     employee *e;
-//     manager m;
-//     enginner en;
-
-//     // Using base class pointer to call overridden methods
-//     e = &m;
-//     e->area();
-
-//     e = &en;
-//     e->area();
-
-//     return 0;
 // }
 
-//===================================================================================================================================================================
+// void insertattail(Node* &tail,int val){ // INSERT AT END
 
-// #include <iostream>
-// using namespace std;
+//     Node* temp = new Node(val);
+//     tail->next = temp;
+//     tail = temp;
 
-// void byValue(int a) {
-//     a += 10;
 // }
 
-// void byReference(int &a) {
-//     a += 10;
-// }
-
-// int main() {
-//     int x = 5;
-//     byValue(x);
-//     cout << "After call by value: " << x << endl;
-
-//     byReference(x);
-//     cout << "After call by reference: " << x << endl;
-//     return 0;
-// }
-
-//===================================================================================================================================================================
-
-// #include <iostream>
-// using namespace std;
-
-// class Shape
-// {
-// public:
-//     virtual void area() = 0;
-// };
-
-
-// class Circle : public Shape
-// {
-//     float radius;
+// void insertatposition(Node* &head,Node* &tail,int pos,int val){
     
-// public:
-
-//     Circle(float r){
-//         this->radius = r;
+//     //insert at start
+//     if (pos == 1 || head == nullptr) {
+//         insertathead(head,val);
+//         return;
 //     }
-
-//     void area()
-//     {
-//         cout << "Area of Circle: " << 3.14f * radius * radius << endl;
-//     }
-// };
-
-
-
-// class Rectangle : public Shape
-// {
-//     float length, breadth;
-
-// public:
-
-//     Rectangle(float l, float b){
-//         this->length = l;
-//         this->breadth = b;
-//     }
-
-//     void area()
-//     {
-//         cout << "Area of Rectangle: " << length * breadth << endl;
-//     }
-// };
-
-
-
-// class Triangle : public Shape
-// {
-//     float base, height;
-
-// public:
-
-//     Triangle(float b, float h){
-//         this->base = b;
-//         this->height = h;
-
-//     }
-
-//     void area()
-//     {
-//         cout << "Area of Triangle: " << 0.5f * base * height << endl;
-//     }
-// };
-
-
-
-// int main()
-// {
-//     Shape *s;
-
-//     Circle c(5);
-//     Rectangle r(4, 6);
-//     Triangle t(3, 7);
-
-//     s = &c;
-//     s->area();
-
-//     s = &r;
-//     s->area();
-
-//     s = &t;
-//     s->area();
-
-//     return 0;
-// }
-
-//===================================================================================================================================================================
-
-// #include <iostream>
-// #include <fstream>
-// using namespace std;
-// int main()
-// {
-//     ofstream of;
-//     of.open("C:\\Users\\doshi\\OneDrive\\Desktop\\file.txt");
-//     of<<"chippi chippi chaapa chaapa";
-//     cout<<"data inserted in file"<<endl;
-//     of.close();
-
-//     ifstream in;
-//     string str;
-//     in.open("C:\\Users\\doshi\\OneDrive\\Desktop\\file.txt");   
-//     while (getline(in,str))
-//     {
-//         cout<<"data :- ";
-//         cout<<str;
-//     }
-//     in.close();
     
+//     Node* temp = head;
+//     int ct = 1;
+
+//     while(ct < pos - 1)
+//     {
+//         temp = temp->next;
+//         ct++;
+//     }
+
+//     //insert at last position
+//     if(temp->next = NULL){
+//         insertattail(tail,val);
+//         return;
+//     }
+
+//     Node* newnode = new Node(val); // INSERT AT SPECIFIC POSITION
+//     newnode->next = temp->next;
+//     temp->next = newnode;
+    
+// }
+
+// void deleteathead(Node*& head) { // DELETE AT HEAD
+//     if (head == nullptr) return; 
+
+//     Node* temp = head;   
+//     head = head->next;   
+//     delete temp;         
+// }
+
+// void deleteattail(Node*& head) { // DELETE AT TAIL
+//     if (head == nullptr) return;        
+//     if (head->next == nullptr) {        
+//         delete head;
+//         head = nullptr;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while (temp->next->next != nullptr) { // Stop at 2nd last node
+//         temp = temp->next;
+//     }
+
+//     delete temp->next;   // Delete last node
+//     temp->next = nullptr;
+// }
+
+// void deleteAtPosition(Node*& head, int pos) { // DELETE AT SPECIFIC POSITION
+//     if (head == nullptr) return; // Empty list
+
+//     // Case 1: Delete head
+//     if (pos == 1) {
+//         deleteathead(head);
+//         return;
+//     }
+
+//     Node* temp = head;
+//     int ct = 1;
+
+//     // Move to (pos - 1)th node
+//     while (ct < pos - 1 && temp->next != nullptr) {
+//         temp = temp->next;
+//         ct++;
+//     }
+
+//     Node* nodetodelete = temp->next;
+//     temp->next = nodetodelete->next; // temp->next = temp->next->next;
+//     delete nodetodelete;
+// }
+
+
+// void traverse(Node* &head){ // TRAVERSING
+
+//     Node* curr = head;
+//     while(curr != NULL)
+//     {
+//         cout<<curr->data<<" ";
+//         curr = curr->next;
+//     }
+//     cout<<endl;
+
+// }
+
+// int main()
+// {
+//     // created a new node
+//     Node *node1 = new Node(10);
+
+//     //pointing head and tail towerds the new node
+//     Node* head = node1;
+//     Node* tail = node1;
+
+//     insertathead(head,50);
+//     insertattail(tail,100);
+//     traverse(head);
+
 //     return 0;
 // }
 
 //===================================================================================================================================================================
 
-#include <iostream>
-using namespace std;
-
-class Animal {
-public:
-    virtual void speak() {
-        cout << "Animal speaks" << endl;
-    }
-};
-
-class Dog : public Animal {
-public:
-    void speak(){
-        cout << "Dog barks" << endl;
-    }
-};
-
-int main() {
-    Animal a;
-    Dog d;
-
-    a.speak();  // Output: Animal speaks
-    d.speak();  // Output: Dog barks
-
-    Animal* ptr = &d;
-    ptr->speak();  // Output: Dog barks (overriding happens here)
-
-    return 0;
-}

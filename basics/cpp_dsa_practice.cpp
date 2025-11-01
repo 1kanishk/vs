@@ -1,18 +1,44 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
+//                                                                       DOUBLY LINKED LIST
+class node{
+    public:
+    int data;
+    node *next;
+    node* prev;
+
+    node(int data){
+        this->data = data;
+        this->next = NULL;
+        this->prev = NULL;
+    }
+
+
+
+
+
+
+
+
+
+};
+
+void print(node* &head){
+    node* temp = head;
+    while(temp != NULL){
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
+}
+
+
 int main()
 {
-    int arr[] = {4,1,5,2,3};
-    int curr = 0;
-    int n = sizeof(arr) / sizeof(arr[0]);
-    for (int i = 1; i < n; i++)
-    {
-        curr = arr[i];
-        
-    }
-    
+    node* node1 = new node(10);
+    node* head = node1;
+    print(head);
+
+
+
     return 0;
 }
