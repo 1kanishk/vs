@@ -667,7 +667,7 @@
 //     }
 
 //     //insert at last position
-//     if(temp->next = NULL){
+//     if(temp->next == NULL){
 //         insertattail(tail,val);
 //         return;
 //     }
