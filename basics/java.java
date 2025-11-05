@@ -1,3 +1,8 @@
+
+// ways of passing arguments 
+// 1. call by value
+// 2. call by reference
+
 // public class java { // PASS BY REFERENCE
 
 
@@ -34,5 +39,24 @@
 //         j.change(x);
 //         System.out.println(x);
 
+//     }
+// }
+
+//===================================================================================================================================================================
+
+// class Animal { // METHOD OVER-RIDING 
+//     void sound() {
+//         System.out.println("Animal makes sound");
+//     }
+// }
+// class Dog extends Animal {
+//     void sound() {
+//         System.out.println("Dog barks");
+//     }
+// }
+// public class java {
+//     public static void main(String[] args) {
+//         Animal a = new Dog();
+//         a.sound();  // Output: Dog barks
 //     }
 // }
