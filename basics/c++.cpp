@@ -856,7 +856,7 @@
 // #include <bits/stdc++.h>
 // using namespace std;
 
-// class mystack{
+// class mystack{ //                                                        STACK USING ARRAY
 //     public:
 
 //     int* arr;
@@ -917,5 +917,97 @@
 
 //     cout<<"Top after pop: "<<s.peek();
     
+//     return 0;
+// }
+
+//===================================================================================================================================================================
+
+// #include <iostream>
+// using namespace std;
+
+// // Node structure
+// class Node { //                                                     STACK USING LINKED LIST
+// public:
+//     int data;
+//     Node* next;
+    
+//     Node(int value) {
+//         data = value;
+//         next = nullptr;
+//     }
+// };
+
+// // Stack class using Linked List
+// class Stack {
+//     Node* top;   // pointer to top of stack
+
+// public:
+//     Stack() {
+//         top = nullptr;
+//     }
+
+//     // Push an element onto the stack
+//     void push(int value) {
+//         Node* newNode = new Node(value);
+//         newNode->next = top;
+//         top = newNode;
+//         cout << value << " pushed into stack\n";
+//     }
+
+//     // Pop an element from the stack
+//     void pop() {
+//         if (isEmpty()) {
+//             cout << "Stack Underflow (nothing to pop)\n";
+//             return;
+//         }
+//         Node* temp = top;
+//         cout << top->data << " popped from stack\n";
+//         top = top->next;
+//         delete temp;
+//     }
+
+//     // Peek the top element
+//     void peek() {
+//         if (isEmpty()) {
+//             cout << "Stack is empty\n";
+//             return;
+//         }
+//         cout << "Top element: " << top->data << endl;
+//     }
+
+//     // Check if stack is empty
+//     bool isEmpty() {
+//         return top == nullptr;
+//     }
+
+//     // Display stack elements
+//     void display() {
+//         if (isEmpty()) {
+//             cout << "Stack is empty\n";
+//             return;
+//         }
+//         Node* temp = top;
+//         cout << "Stack elements: ";
+//         while (temp != nullptr) {
+//             cout << temp->data << " ";
+//             temp = temp->next;
+//         }
+//         cout << endl;
+//     }
+// };
+
+// int main() {
+//     Stack s;
+
+//     s.push(10);
+//     s.push(20);
+//     s.push(30);
+//     s.display();
+
+//     s.peek();
+
+//     s.pop();
+//     s.display();
+
 //     return 0;
 // }
