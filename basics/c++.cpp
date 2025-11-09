@@ -1011,3 +1011,75 @@
 
 //     return 0;
 // }
+
+//===================================================================================================================================================================
+
+// #include <iostream>
+// using namespace std;
+
+// class Queue {//                                                        QUEUE OPERATIONS
+//     int front, rear;
+//     int size;
+//     int* arr;
+
+// public:
+//     Queue(int s) {
+//         size = s;
+//         arr = new int[size];
+//         front = -1;
+//         rear = -1;
+//     }
+
+//     void enqueue(int value) {
+//         if (rear == size - 1) {
+//             cout << "Queue Overflow!" << endl;
+//             return;
+//         }
+//         if (front == -1) front = 0;  // First insertion
+//         arr[++rear] = value;
+//         cout << value << " enqueued." << endl;
+//     }
+
+//     void dequeue() {
+//         if (front == -1 || front > rear) {
+//             cout << "Queue Underflow!" << endl;
+//             return;
+//         }
+//         cout << arr[front++] << " dequeued." << endl;
+
+//         // Reset when queue becomes empty
+//         if (front > rear) {
+//             front = rear = -1;
+//         }
+//     }
+
+//     void display() {
+//         if (front == -1) {
+//             cout << "Queue is empty." << endl;
+//             return;
+//         }
+//         cout << "Queue elements: ";
+//         for (int i = front; i <= rear; i++) {
+//             cout << arr[i] << " ";
+//         }
+//         cout << endl;
+//     }
+// };
+
+// int main() {
+//     Queue q(5);
+
+//     q.enqueue(10);
+//     q.enqueue(20);
+//     q.enqueue(30);
+//     q.display();
+
+//     q.dequeue();
+//     q.display();
+
+//     q.enqueue(40);
+//     q.enqueue(50);
+//     q.display();
+
+//     return 0;
+// }
