@@ -1,62 +1,45 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
 
-// ways of passing arguments 
-// 1. call by value
-// 2. call by reference
+class Person {
+    // Attributes
+    private String name;
+    private int age;
 
-// public class java { // PASS BY REFERENCE
+    // Setter methods
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-//     static class box{
-//         int value = 10;
-//     }
-    
-//     static class demo{
-//         void modify(box b){
-//             b.value = 20;
-//         }
-//     }
+    // Getter methods
+    public String getName() {
+        return name;
+    }
 
-//     public static void main(String[] args) {
-        
-//         box b = new box();
-//         demo d = new demo();
-//         d.modify(b);
-//         System.out.println(b.value);
+    public int getAge() {
+        return age;
+    }
+}
 
-//     }
-// }
+public class java {
+    public static void main(String[] args) {
 
-//===================================================================================================================================================================
+        // Creating first Person object
+        Person p1 = new Person();
+        p1.setName("Rahul");
+        p1.setAge(25);
 
-// public class java { // PASS BY VALUE
+        // Creating second Person object
+        Person p2 = new Person();
+        p2.setName("Anita");
+        p2.setAge(30);
 
-//     void change(int val){
-//         val = val + 10;
-//     }
-//     public static void main(String[] args) {
-//         int x = 1;
-//         java j = new java();
-//         j.change(x);
-//         System.out.println(x);
-
-//     }
-// }
-
-//===================================================================================================================================================================
-
-// class Animal { // METHOD OVER-RIDING 
-//     void sound() {
-//         System.out.println("Animal makes sound");
-//     }
-// }
-// class Dog extends Animal {
-//     void sound() {
-//         System.out.println("Dog barks");
-//     }
-// }
-// public class java {
-//     public static void main(String[] args) {
-//         Animal a = new Dog();
-//         a.sound();  // Output: Dog barks
-//     }
-// }
+        // Displaying values
+        System.out.println("Person 1: " + p1.getName() + ", Age: " + p1.getAge());
+        System.out.println("Person 2: " + p2.getName() + ", Age: " + p2.getAge());
+    }
+}
